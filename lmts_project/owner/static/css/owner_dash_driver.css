@@ -1,0 +1,32 @@
+.container {
+    margin-top: 20px;
+}
+
+/* Style for buttons */
+.equal-width-btn {
+    width: calc(100% / 3 - 10px); /* Adjust button width based on the number of buttons per row */
+    margin-right: 10px; /* Adjust margin between buttons */
+    margin-bottom: 10px; /* Adjust margin between rows */
+    display: inline-block; /* Display buttons in a row */
+}
+
+/* Clearfix to ensure rows wrap correctly */
+.set::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* styling nav bar */
+.nav-link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* styling logo in nav bar */
+.logo{
+    max-width: 25%;
+    max-height: 25%;
+}

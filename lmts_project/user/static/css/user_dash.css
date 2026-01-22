@@ -1,0 +1,39 @@
+/* increasing button size */
+.set button{
+    height: 70px;
+}
+/* styling the button */
+.equal-width-btn {
+    width: 100%; 
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+/* styling button text */
+.btn.btn-outline-success.equal-width-btn{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* styling curousel */
+.carousel-item{
+    max-height: 400px;
+    margin-bottom: 10px;
+}
+/* styling images in curousel */
+.d-block {
+    max-width: 100%;
+    max-height: 400px;
+} 
+.logo{
+    width: 25%;
+    height: 25%;
+}
+
+/* styling nav bar */
+.nav-link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+} 

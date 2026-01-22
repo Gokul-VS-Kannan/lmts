@@ -1,0 +1,78 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/driver_status.css' %}">
+    <title>Updating Driver Status</title>
+</head>
+<body>
+    <!-- navbar creation -->
+    <div> 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <!-- Navbar content  -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/truckgreyIco.png' %}" class="logo">LMTS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="driver_dash"> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="driv_contact"> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="driv_about">About Us </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="drivlogout"> Logout</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div> 
+    <!-- creating form for updating mechanic status -->
+    <div class="container">
+        <div class="row">
+            <form action="driv_status" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Full Name:</label>
+                    <input type="text" class="form-control" name="name"placeholder="Full Name" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Today's Date:</label>
+                    <input type="date" class="form-control" name="date" placeholder="Today's date" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Time of Entry:</label>
+                    <input type="time" class="form-control" name="time" placeholder="Time of Entry" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Attendance:</label>
+                    <input type="text" class="form-control" name="status" placeholder="Attendance" required>
+                </div>
+                <!-- check box for verifing  -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Please make sure that the details entered are correct</label>
+                </div>
+                <!-- creating button for registration  -->
+                <input type="submit" class="btn btn-outline-success"value="Submit">
+            </form>
+        </div>
+    </div>
+    
+    <!-- script for bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

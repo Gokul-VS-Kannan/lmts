@@ -1,0 +1,88 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mech_service_update.css' %}">
+    <title>Service Update</title>
+</head>
+<body>
+    <!-- navbar creation -->
+    <div> 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <!-- Navbar content  -->
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="{% static 'images/truckgreyIco.png' %}" class="logo">LMTS
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="mech_dash"> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="mech_contact"> Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="mech_about">About Us </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="mechlogout"> Logout</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- creating form for updating service records -->
+    <div class="container">
+        <div class="row">
+            <form action="serv_update" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Vehicle id:</label>
+                    <input type="text" class="form-control" name="veid"placeholder="Vehicle id" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Registration:</label>
+                    <input type="text" class="form-control" name="reg" placeholder="Registration"required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Category:</label>
+                    <input type="text" class="form-control" name="cat"placeholder="Category" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">CC:</label>
+                    <input type="text" class="form-control" name="cc"placeholder="CC" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Complaint:</label>
+                    <input type="text" class="form-control" name="issue"placeholder="Report Issue" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Service Details:</label>
+                    <input type="text" class="form-control" name="sdetail" row="7"placeholder="Service Details" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Date of Service:</label>
+                    <input type="date" class="form-control" name="sdate"placeholder="Date of Report Issue" required>
+                </div> 
+                <div class="mb-3">
+                    <label class="form-label">Date of Delivery:</label>
+                    <input type="date" class="form-control" name="deldate"placeholder="Date of Report Issue" required>
+                </div>   
+                <input type="submit" class="btn btn-outline-success"value="Submit">
+            </form>
+        </div>
+    </div>
+    
+    <!-- script for bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

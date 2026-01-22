@@ -1,0 +1,33 @@
+/* styling nav bar */
+.nav-link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* styling logo in nav bar */
+.logo{
+    max-width: 25%;
+    max-height: 25%;
+}
+.row{
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 30px;
+} 
+body{
+    background-color: rgb(212, 171, 116);
+}
+label{
+    color: black;
+}
+  
+.btn { 
+    border-radius: 25px; 
+    padding-left:10%;
+    padding-right: 10%;
+    display: block;
+    margin: auto;
+}

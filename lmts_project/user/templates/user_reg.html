@@ -1,0 +1,64 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/user_reg.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <p class="hed">REGISTER</p>
+    <div class="container">
+        <div class="row">
+            <form action="reguser" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Full Name:</label>
+                    <input type="text" class="form-control" name="name"placeholder="Full Name" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Profile Picture:</label>
+                    <input type="file" accept="image/*" class="form-control" name="Image" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Username:</label>
+                    <input type="text" class="form-control" name="uname"placeholder="Username" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password:</label>
+                    <input type="password" class="form-control" name="pwd"placeholder="Password" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Age:</label>
+                    <input type="text" class="form-control" name="age" placeholder="Age" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Phone number:</label>
+                    <input type="text" class="form-control" name="phnnum" placeholder="Phone Number" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Email id:</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email id" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Address:</label>
+                    <textarea type="text" class="form-control" name="address" row="4" placeholder="Please Enter The Address" required></textarea>
+                </div>
+                <!-- check box for verifing  -->
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Please make sure that the details entered are correct</label>
+                </div>
+                <!-- creating button for registration  -->
+                <input type="submit" class="btn btn-outline-success"value="Register">
+
+            </form>
+        </div>
+    </div>
+
+    <!--   script tag for bootstrap   -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
